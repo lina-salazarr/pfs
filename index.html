@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <title>The early universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="main-title">Syntesis Final Project</h1>
+    </header>
+
+    <div class="tab">
+      <button
+        class="tablinks"
+        onclick="openTab(event, 'tab1')"
+        id="tab1-button"
+      >
+        Absorption spectra
+      </button>
+      <button
+        class="tablinks"
+        onclick="openTab(event, 'tab2')"
+        id="tab2-button"
+      >
+        Emission spectra
+      </button>
+      <button
+        class="tablinks"
+        onclick="openTab(event, 'tab3')"
+        id="tab3-button"
+      >
+        Solar system
+      </button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="tab1" class="tabcontent"></div>
+    <div id="tab2" class="tabcontent"></div>
+    <div id="tab3" class="tabcontent"></div>
+    <script src="js/tabs.js"></script>
+
+    <script>
+      const texts = ["tab1", "tab2", "tab3"];
+      for (let i = 0; i < texts.length; i++) {
+        $("#" + texts[i] + "-button").click(function () {
+          $("#" + texts[i]).load("html/" + texts[i] + ".html");
+        });
+      }
+    </script>
+
+    <script>
+      $("#tab1-button").click();
+    </script>
+
+    <footer>
+      <section>
+        <a href="#main-title"> Go up</a> <br />
+        <br />
+        <a href="mailto:linasofia.salazarrodriguez@bethlemitasbello.edu.co"
+          >Contact Lina</a
+        >
+        <br />
+        <a href="mailto:anasofia.munozortiz@bethlemitasbello.edu.co"
+          >Contact Sofia</a
+        >
+      </section>
+      <br />
+      Creative commons licence
+    </footer>
+</body>
+</html>
+
